@@ -5,16 +5,16 @@ int main() {
 	u_t a = 0;
 	size_t count = 0;
 	while (std::cin >> a) {
-		count++;
+		count+=a*a;
 	}
 
 	std::cin >> a;
 	if (std::cin.eof()) {
-		std::cout << 0;
+		std::cout << count;
 		std::cout << "\n";
 	}
 	else if (std::cin.fail()) {
-		std::cerr << "Erro\n";
+		std::cerr << "Error\n";
 		return 1;
 	}
 }
